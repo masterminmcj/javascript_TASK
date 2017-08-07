@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab选项卡实践</title>
+    <link href="../css/demo.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" data-config='{
+ "triggerType":"click",
+    "effect":"fade",
+    "autoPlay":false
+}'>
+        <ul class="nav-tab">
+            <li class="nav-item "><a href="javascript:void(0) ">新闻</a></li>
+            <li class="nav-item active"><a href="javascript:void(0)">娱乐</a></li>
+            <li class="nav-item"><a href="javascript:void(0)">电影</a></li>
+            <li class="nav-item"><a href="javascript:void(0)">体育</a></li>
+        </ul>
+
+
+
+    <div class="tab-container">
+        <div class="tab-item "><img src="../img/a4.jpg"></div>
+        <div class="tab-item current"><img src="../img/a10.jpg"></div>
+        <div class="tab-item"><img src="../img/pic2.jpg"></div>
+        <div class="tab-item"><img src="../img/pic4.jpg"></div>
+
+    </div>
+
+</div>
+
+
+
+<script type="application/javascript" src="../lib/jquery.min.js"></script>
+<script type="application/javascript" src="../lib/tab.js"></script>
+<script>
+$('.container').tab()
+</script>
+</body>
+</html>
