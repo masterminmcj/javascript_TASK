@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  body,html{
+    width: 100%;
+    height: 100%;
+  }
+  .loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .loading img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation:rotate 1000ms infinite ;
+  }
+  @keyframes rotate {
+    0%{
+      transform: rotateZ(0deg);
+    }
+    100%{
+      transform: rotateZ(360deg);
+    }
+  }
+
+</style>
+<body>
+<div class="loading" >
+  <img src="../static/img/icon/air.png"/>
+</div>
+<div>adsasdas</div>
+
+</body>
+</html>

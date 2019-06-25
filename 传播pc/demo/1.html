@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta>
+  <title>echarts</title>
+  <script language="JavaScript" src="https://res.variflight.com/public/js/echarts/echarts.min.js?v=20180716"  charset="UTF-8"></script>
+  <script language="JavaScript" src="https://res.variflight.com/public/js/echarts/theme/blue_line.js?v=20190115" charset="UTF-8"></script>
+</head>
+<body>
+<div id="main" style="width:100%;max-width:650px;height:400px"></div>
+<script>
+  function _getQueryFromURL() {
+    var url = location.search;
+    var tmp = url.split('?');
+    var query = (tmp[1] || "").split('#')[0].split('&');
+    var params = {};
+    for (var i=0; i<query.length; i++) {
+      var arg = query[i].split('=');
+      if(arg.length>1){
+        params[arg[0]] = unescape(arg[1]);
+      }
+    }
+    return params;
+  }
+
+  var obj = _getQueryFromURL();
+  console.log(obj);
+  var example_num = parseInt(obj.example_num);
+
+  var t = new Date().getTime();
+  var r = parseInt(t/60);
+  document.write('<script language="JavaScript" src="https://res.variflight.com/public/js/echarts/store/'+ example_num +'.js?r='+ r +'" charset="UTF-8"><\/script>');
+
+</script>
+</body>
+</html>

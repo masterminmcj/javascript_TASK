@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="GBK">
+    <title>民航资源网-品牌</title>
+  <script>
+    var store=window.localStorage;
+    if(!store){
+      location.href='http://www.carnoc.com/spread/#/home'
+    }
+    else {
+      var returnHref=store.getItem('nowLink');
+      if(!returnHref){
+        location.href='http://www.carnoc.com/spread/#/home'
+      }
+      else {
+        location.href=returnHref;
+      }
+
+      console.log(returnHref)
+    }
+
+
+
+  </script>
+</head>
+<body>
+
+<script>
+
+
+
+
+</script>
+</body>
+</html>
